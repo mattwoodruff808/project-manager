@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  loginView = true;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleView(): void {
+    this.loginView = !this.loginView;
   }
 
 }

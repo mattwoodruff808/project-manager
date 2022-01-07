@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div *ngIf="loginView">
+    <h3>Login</h3>
+    <input placeholder="Email"/>
+    <input placeholder="Password"/>
+    <button>Login</button>
+    <p (click)="toggleView()">Register</p>
+</div>
+
+<div *ngIf="!loginView">
+    <h3>Register</h3>
+    <input placeholder="Name"/>
+    <input placeholder="Email"/>
+    <input placeholder="Code"/>
+    <input placeholder="Password"/>
+    <input placeholder="Confirm Password"/>
+    <button>Register</button>
+    <p (click)="toggleView()">Login</p>
+</div>
