@@ -1,8 +1,8 @@
 <div *ngIf="loginView">
     <h3>Login</h3>
-    <input placeholder="Email"/>
-    <input placeholder="Password"/>
-    <button>Login</button>
+    <input placeholder="Email" [(ngModel)]="email" />
+    <input placeholder="Password" [(ngModel)]="password" type="password" />
+    <button (click)="handleLogin()">Login</button>
     <p (click)="toggleView()">Register</p>
 </div>
 
@@ -16,3 +16,9 @@
     <button>Register</button>
     <p (click)="toggleView()">Login</p>
 </div>
+
+<div *ngIf="loginSuccess">
+    <p>Successful Login!</p>
+</div>
+
+<p>{{ loginMessage }}</p>
